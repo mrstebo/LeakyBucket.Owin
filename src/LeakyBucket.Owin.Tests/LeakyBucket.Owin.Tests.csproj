@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LeakyBucketContainerTests.cs" />
+    <Compile Include="LeakyBucketMiddlewareExtensionsTests.cs" />
     <Compile Include="LeakyBucketMiddlewareTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

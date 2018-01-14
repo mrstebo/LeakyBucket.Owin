@@ -52,6 +52,7 @@
     <Compile Include="LeakyBucketContainer.cs" />
     <Compile Include="LeakyBucketContainerConfiguration.cs" />
     <Compile Include="LeakyBucketMiddleware.cs" />
+    <Compile Include="LeakyBucketMiddlewareExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Store\DefaultRequestStore.cs" />
     <Compile Include="Store\IRequestStore.cs" />
