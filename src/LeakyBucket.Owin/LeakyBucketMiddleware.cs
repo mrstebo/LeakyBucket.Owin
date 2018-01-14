@@ -6,8 +6,6 @@ namespace LeakyBucket.Owin
 {
     public class LeakyBucketMiddleware : OwinMiddleware
     {
-        private const int TooManyRequestsStatusCode = 429;
-        
         private readonly LeakyBucketConfiguration _configuration;
 
         public LeakyBucketMiddleware(OwinMiddleware next, LeakyBucketConfiguration configuration) 
@@ -27,9 +25,9 @@ namespace LeakyBucket.Owin
             };
             var container = new LeakyBucketContainer(store, config);
 
-            if (container.RequestsRemaining(identifier) == 0)
+            if (container.RequestsRemaining(identifier) <= 0)
             {
-                context.Response.StatusCode = TooManyRequestsStatusCode;
+                context.Response.StatusCode = ExtendedHttpStatusCodes.TooManyRequests;
             }
 
             await Next.Invoke(context);

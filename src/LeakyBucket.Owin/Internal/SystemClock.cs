@@ -2,7 +2,7 @@
 
 namespace LeakyBucket.Owin.Internal
 {
-    internal interface ISystemClock
+    public interface ISystemClock
     {
         DateTime UtcNow { get; }
     }
