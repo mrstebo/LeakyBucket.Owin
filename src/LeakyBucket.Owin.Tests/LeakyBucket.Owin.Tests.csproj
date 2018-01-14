@@ -58,10 +58,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Identifiers\DefaultClientIdentifierTests.cs" />
     <Compile Include="LeakyBucketContainerTests.cs" />
     <Compile Include="LeakyBucketMiddlewareExtensionsTests.cs" />
     <Compile Include="LeakyBucketMiddlewareTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Store\DefaultRequestStoreTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
