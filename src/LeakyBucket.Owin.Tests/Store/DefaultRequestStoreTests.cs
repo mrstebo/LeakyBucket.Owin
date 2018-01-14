@@ -66,5 +66,19 @@ namespace LeakyBucket.Owin.Tests.Store
 
             Assert.AreEqual(2, store.NumberOfRequestsFor(identifier));
         }
+
+        [Test]
+        public void DeleteRequestsOlderThan_should_not_fail_when_no_more_requests_for_identifier()
+        {
+            var identifier = A.Fake<IClientIdentifier>();
+            var store = new DefaultRequestStore(2);
+            var oldDateTime = new DateTime(2017, 1, 1, 12, 0, 0);
+            
+            store.AddRequest(identifier, oldDateTime);
+            store.AddRequest(identifier, oldDateTime);
+            
+            Assert.DoesNotThrow(() => store.DeleteRequestsOlderThan(identifier, DateTime.UtcNow));
+            Assert.DoesNotThrow(() => store.DeleteRequestsOlderThan(identifier, DateTime.UtcNow));
+        }
     }
 }
