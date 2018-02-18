@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>LeakyBucket.Owin</id>
+    <version>$version$</version>
+    <authors>mrstebo</authors>
+    <owners>mrstebo</owners>
+    <licenseUrl>https://github.com/mrstebo/LeakyBucket.Owin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mrstebo/LeakyBucket.Owin</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Owin middleware that implements the leaky bucket algorithm for request throttling.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>owin leaky bucket rate limiting limiter leaky-bucket-algorithm leakybucket rate-limiter rate-limiting</tags>
+    <dependencies>
+     <dependency id="Microsoft.Owin" version="3.1.0" />
+     <dependency id="Owin" version="1.0" />
+   </dependencies>
+  </metadata>
+  <files>
+    <file src="src\LeakyBucket.Owin\bin\$target$\LeakyBucket.Owin.dll" target="lib" />
+  </files>
+</package>
